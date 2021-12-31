@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Awesome Product Card</title>
+    <link rel="shortcut icon" href="#" />
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="reset.css">
+
+    <!-- boxicon -->
+    <link href='https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css' rel='stylesheet'>
+    <!-- font poppins -->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
+    <!-- font awesome -->
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
+        integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
+</head>
+
+<body>
+
+    <div class="card">
+        <div class="card-interaction">
+            <i class='bx bx-heart'></i>
+            <i class='bx bx-cart'></i>
+        </div>
+
+        <img src="https://www.nodemy.vn/projects/html-css-js/product-card/Nike%20Zoom%20KD%2012.png" alt=""
+            class="card-img">
+        <h1 class="card-heading">Nike Zoom KD 12</h1>
+        <h2 class="card-subheading">$99</h2>
+
+        <div class="card-info">
+            <div class="card-info__size">
+                <span>Size</span>
+                <button class="btn-size">6</button>
+                <button class="btn-size">7</button>
+                <button class="btn-size">8</button>
+                <button class="btn-size">9</button>
+            </div>
+
+            <div class="card-info__color">
+                <span>Color</span>
+                <button class="btn-color red"></button>
+                <button class="btn-color green"></button>
+                <button class="btn-color blue"></button>
+            </div>
+
+            <div class="card-info__btns">
+                <button class="buy-now">Buy now</button>
+                <button class="add-cart">Add cart</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- javascript -->
+    <script src="app.js" type="module"></script>
+</body>
+
+</html>

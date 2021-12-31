@@ -1,0 +1,210 @@
+/*
+  Breakpoints:
+  320
+  480
+  768 tablet
+  1024 laptop
+  1280 retina
+  1366
+  1440
+  1660
+  1920
+*/
+
+html {
+  font-size: 62.5%;
+  scroll-behavior: smooth;
+}
+
+/*========== VARIABLES CSS ==========*/
+:root {
+  /*========== Colors ==========*/
+  --primary-color: #4daf54;
+
+  /*========== Font and typography ==========*/
+  --title-font: ;
+  --body-font: 'Poppins', sans-serif;
+  --biggest-font-size: 8rem;
+  --bigger-font-size: 5.6rem;
+  --big-font-size: 4rem;
+  --h2-font-size: 2rem;
+  --h3-font-size: 1.8rem;
+  --normal-font-size: 1.5rem;
+  --small-font-size: 1.3rem;
+  --smaller-font-size: 1.2rem;
+  --text-line-height: 3.2rem;
+
+  /*========== Font weight ==========*/
+  --font-thin: 300;
+  --font-medium: 500;
+  --font-semi-bold: 600;
+}
+
+/*  Breakpoints: 320 480 768-tablet 1024-laptop 1280-retina 1366 1440 1660 1920  */
+/*========== RESPONSIVE TYPOGRAPHY ==========*/
+@media screen and (min-width: 968px) {
+  :root {
+    --biggest-font-size: 12rem;
+    --bigger-font-size: 7.2rem;
+    --big-font-size: 6.4rem;
+    --h2-font-size: 2.4rem;
+    --h3-font-size: 2rem;
+    --normal-font-size: 1.6rem;
+    --small-font-size: 1.4rem;
+    --smaller-font-size: 1.3rem;
+  }
+}
+
+/*========== BASE ==========*/
+* {
+}
+
+body {
+  font-family: var(--body-font);
+  font-size: var(--normal-font-size);
+  color: var(--text-color);
+  width: 100%;
+  min-height: 100vh;
+  background-image: linear-gradient(to right, #4daf54, #3d8880);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+h1,
+h2,
+h3 {
+  color: var(--title-color);
+  font-family: var(--body-font);
+}
+
+h1 {
+  color: var(--primary-color);
+}
+
+button:hover {
+  scale: 0.9;
+}
+
+.card {
+  background-color: #272d40;
+  width: 32rem;
+  /* height: 40rem; */
+  border-radius: 1.5rem;
+  padding: 2rem;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  /* align-items: center; */
+}
+
+.card .card-interaction {
+  font-size: 2.4rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  transition: all 0.8s ease;
+  cursor: pointer;
+  z-index: 1000;
+}
+
+.card-interaction > *:hover {
+  color: var(--primary-color);
+}
+
+.card-img {
+  width: 90%;
+  transition: all 0.5s ease;
+}
+
+.card-heading,
+.card-subheading {
+  text-align: center;
+  transition: all 0.8s ease;
+}
+
+.card-heading {
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-top: 1.6rem;
+}
+
+.card-subheading {
+  margin: 1.6rem 0 0rem;
+  font-size: 2.4rem;
+  font-weight: 600;
+}
+
+.card-info > div {
+  display: flex;
+  align-items: center;
+}
+
+.card-info span {
+  font-size: 2rem;
+  display: inline-block;
+  margin-right: 1rem;
+}
+
+.card-info__color {
+  margin: 1.6rem 0;
+}
+
+.card-info__size button {
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+  margin-right: 0.6rem;
+  background-color: #ccc;
+  border: none;
+  font-weight: 600;
+}
+
+.card-info__color button {
+  border: none;
+  width: 2.4rem;
+  height: 2.4rem;
+  border-radius: 50%;
+  background-color: red;
+  margin-right: 1rem;
+}
+
+.btn-color.green {
+  background-color: green;
+}
+
+.btn-color.blue {
+  background-color: cyan;
+}
+
+.card-info__btns button {
+  padding: 0.8rem 1.6rem;
+  margin-right: 1.5rem;
+  border-radius: 8px;
+  color: white;
+  background-color: var(--primary-color);
+  border: none;
+  text-transform: uppercase;
+  font-weight: 600;
+}
+
+.card-info {
+  transform: translateY(14rem);
+  opacity: 0;
+  transition: all 0.8s ease;
+}
+
+/* Animations */
+.card:hover .card-img {
+  transform: translateY(-90px) rotate(-20deg);
+}
+
+.card:hover .card-heading,
+.card:hover .card-subheading {
+  text-align: left;
+  transform: translateY(-5rem);
+}
+
+.card:hover .card-info {
+  transform: translateY(0);
+  opacity: 1;
+}
